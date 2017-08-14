@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of Laravel Rewardable.
  *
@@ -9,8 +11,8 @@
  * file that was distributed with this source code.
  */
 
-use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 class CreateLeaderboardTable extends Migration
 {

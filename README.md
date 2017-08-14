@@ -8,12 +8,6 @@ Require this package, with [Composer](https://getcomposer.org/), in the root dir
 $ composer require faustbrian/laravel-rewardable
 ```
 
-And then include the service provider within `app/config/app.php`.
-
-``` php
-BrianFaust\Rewardable\RewardableServiceProvider::class
-```
-
 To get started, you'll need to publish the vendor assets and migrate:
 
 ```
@@ -49,23 +43,15 @@ class User extends Model
 }
 ```
 
-## Changelog
-
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
-
 ## Testing
 
 ``` bash
 $ phpunit
 ```
 
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
-
 ## Security
 
-If you discover a security vulnerability within this package, please send an e-mail to Brian Faust at hello@brianfaust.de. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this package, please send an e-mail to Brian Faust at hello@brianfaust.me. All security vulnerabilities will be promptly addressed.
 
 ## Credits
 
@@ -74,4 +60,4 @@ If you discover a security vulnerability within this package, please send an e-m
 
 ## License
 
-[MIT](LICENSE) © [Brian Faust](https://brianfaust.de)
+[MIT](LICENSE) © [Brian Faust](https://brianfaust.me)

@@ -1,14 +1,5 @@
 <?php
 
-/*
- * This file is part of Laravel Rewardable.
- *
- * (c) Brian Faust <hello@brianfaust.de>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
-
 declare(strict_types=1);
 
 /*
@@ -23,9 +14,9 @@ declare(strict_types=1);
 namespace BrianFaust\Rewardable\Credits;
 
 use Carbon\Carbon;
-use Illuminate\Database\Eloquent\Collection;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Collection;
 
 class CreditRepository
 {
@@ -76,7 +67,7 @@ class CreditRepository
     {
         $credit = new Credit(array_merge(array_except($credit->toArray(), ['type']), [
             'credit_type_id' => $credit['type']->id,
-            'awarded_at'     => Carbon::now(),
+            'awarded_at' => Carbon::now(),
         ]));
 
         return $this->model->credits()->save($credit);
@@ -99,7 +90,7 @@ class CreditRepository
         if ($credit->count() && empty($credit->revoked_at)) {
             $credit->update([
                 'revoke_reason' => $revokeReason,
-                'revoked_at'    => Carbon::now(),
+                'revoked_at' => Carbon::now(),
             ]);
         }
     }
